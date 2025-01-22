@@ -72,3 +72,16 @@ body {
   .hex-color-container button:hover {
     background-color: #0056b3;
   }
+
+  .rgb-color-container {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0rem 2rem;
+  }
+  
+  .rgb-color-container p{
+    font-size: 1.7rem;
+    color: #36454F;
+  }
