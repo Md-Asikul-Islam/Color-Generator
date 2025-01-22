@@ -100,3 +100,9 @@ body {
   #rgb-btn:hover{
     background-color: #0056b3;
   }
+
+  .rgb-color-container label {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
