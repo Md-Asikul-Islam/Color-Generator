@@ -12,7 +12,7 @@ html {
 
 body {
   font-family: "Poppins", serif;
-  background: #f0f8ff;
+  background: #F0F8FF;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -21,119 +21,155 @@ body {
   padding: 2rem;
 }
 
-.random-color-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
+.color-generator-container {
   width: 90%;
   max-width: 50rem;
-  background: #ffffff;
-  padding: 4rem 1rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: #F5FFFA;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 3px;
+  box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.15), -7px -7px 15px rgba(255, 255, 255, 0.9);
+  gap: 2rem;
 }
 
-@media (max-width: 768px) {
-  .random-color-container {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 3rem 1rem;
-  }
-}
-
-.hex-color-container {
+.hex-color-gen {
   flex: 1;
+  min-width: 18rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   justify-content: center;
   align-items: center;
-  padding: 0rem 2rem;
 }
 
-.hex-color-container p{
-    font-size: 1.7rem;
-    color: #36454F;
-  }
+.hex-color-gen p {
+  font-size: 1.8rem;
+  color: #36454F;
+  text-align: center;
+}
 
-  .hex-color-container button {
-    font-size: 1.6rem;
-    padding: 0.7rem 2rem;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: background-color 0.5s ease-in-out;
-  }
-  
-  .hex-color-container button:hover {
-    background-color: #0056b3;
-  }
+.hex-color-gen button {
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+}
 
-  .rgb-color-container {
-    flex: 2;
-    display: flex;
+.hex-color-gen button:hover {
+  background-color: #0056b3;
+}
+
+.rgb-color-gen {
+  flex: 2;
+  min-width: 25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.rgb-color-gen p {
+  font-size: 1.8rem;
+  color: #36454F;
+}
+
+.rgb-btn {
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.rgb-btn:hover {
+  background-color: #0056b3;
+}
+
+.rgb-color-gen label {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.rgb-color-gen input[type="range"] {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 1rem;
+  background: #ddd;
+  outline: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.rgb-color-gen input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 2rem;
+  height: 2rem;
+  background: #007BFF;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+}
+
+.rgb-color-gen input[type="range"]::-moz-range-thumb {
+  width: 2rem;
+  height: 2rem;
+  background: #007BFF;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .color-generator-container {
     flex-direction: column;
-    gap: 1rem;
-    padding: 0rem 2rem;
+    gap: 2rem;
   }
   
-  .rgb-color-container p{
-    font-size: 1.7rem;
-    color: #36454F;
+
+  .hex-color-gen,
+  .rgb-color-gen {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
   }
 
-  #rgb-btn{
-    font-size: 1.6rem;
-    padding: 1.4rem 1.2rem;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: background-color 0.5s ease-in-out;
-  }
-  
-  #rgb-btn:hover{
-    background-color: #0056b3;
-  }
-
-  .rgb-color-container label {
+  .hex-color-gen button,
+  .rgb-btn {
+    padding: 1rem;
     font-size: 1.4rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 50%; /* 1rem = 8px */
   }
 
-  .rgb-color-container input[type="range"] {
-    width: 100%;
-    -webkit-appearance: none;
-    appearance: none;
-    height: 1rem;
-    background: #ddd;
-    outline: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
+  .color-generator-container {
+    padding: 1.5rem;
   }
-  
-  .rgb-color-container input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 2rem;
-    height: 2rem;
-    background: #007BFF;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 2px solid white;
+
+  .hex-color-gen p,
+  .rgb-color-gen p {
+    font-size: 1.6rem;
   }
-  
-  .rgb-color-container input[type="range"]::-moz-range-thumb {
-    width: 2rem;
-    height: 2rem;
-    background: #007BFF;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 2px solid white;
+
+  .hex-color-gen button,
+  .rgb-btn {
+    padding: 0.8rem 1.6rem;
+    font-size: 1.2rem;
   }
+}
