@@ -12,7 +12,7 @@ html {
 
 body {
   font-family: "Poppins", serif;
-  background: #F0F8FF;
+  background: #f0f8ff;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -22,35 +22,38 @@ body {
 }
 
 .random-color-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    width: 90%;
-    max-width: 50rem;
-    background: #ffffff;
-    padding: 4rem 1rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  width: 90%;
+  max-width: 50rem;
+  background: #ffffff;
+  padding: 4rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-  @media (max-width: 768px) {
-    .random-color-container {
-      flex-direction: column;
-      gap: 2rem;
-      padding: 3rem 1rem;
-    }
-  }
-
-  
-.hex-color-container {
-    flex: 1;
-    display: flex;
+@media (max-width: 768px) {
+  .random-color-container {
     flex-direction: column;
     gap: 2rem;
-    justify-content: center;
-    align-items: center;
-    padding: 0rem 2rem;
+    padding: 3rem 1rem;
   }
-  
+}
+
+.hex-color-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 2rem;
+}
+
+.hex-color-container p{
+    font-size: 1.7rem;
+    color: #36454F;
+  }
