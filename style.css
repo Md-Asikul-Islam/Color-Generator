@@ -106,3 +106,34 @@ body {
     font-weight: bold;
     margin-bottom: 0.5rem;
   }
+
+  .rgb-color-container input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 1rem;
+    background: #ddd;
+    outline: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .rgb-color-container input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 2rem;
+    height: 2rem;
+    background: #007BFF;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid white;
+  }
+  
+  .rgb-color-container input[type="range"]::-moz-range-thumb {
+    width: 2rem;
+    height: 2rem;
+    background: #007BFF;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid white;
+  }
