@@ -1,47 +1,51 @@
-// Hex Color Generator
-const hexBtn = document.querySelector(".hex-btn");
+// Hex-color-Generator
+
+const hexBtn = document.querySelector("#hex-btn"); // Corrected selector
 const hexColorValue = document.querySelector(".hex-color-value");
 
-hexBtn.addEventListener("click", () => {
-  const characterSet = "0123456789ABCDEF";
-  let hexColorOutput = "#";
+hexBtn.addEventListener("click", (event) => {
+    const characterSet = "0123456789ABCDEF";
+    let hexColorOutput = "#";
 
-  // Generate a random 6-character hex code
-  for (let i = 0; i < 6; i++) {
-    const randomIndex = Math.floor(Math.random() * characterSet.length);
-    hexColorOutput += characterSet[randomIndex];
-  }
+    // Generate a random hex color
+    for (let i = 0; i < 6; i++) {
+        const randomIndex = Math.floor(Math.random() * characterSet.length); // Fixed random logic
+        hexColorOutput += characterSet[randomIndex];
+    }
 
-  // Update the text content with the generated hex color
-  hexColorValue.textContent = hexColorOutput;
+    // Update the text content with the generated hex color
+    hexColorValue.textContent = hexColorOutput;
 
-  // Update the background color of the body
-  document.body.style.backgroundColor = hexColorOutput;
+    // Update the background color of the body
+    document.body.style.backgroundColor = hexColorOutput;
 });
 
-// RGB color generator 
+// RGB-color-Generator
 
+// Selecting the input elements for Red, Green, and Blue color values
+const getRedInputRange = document.querySelector(".red");
+const getGreenInputRange = document.querySelector(".green");
+const getBlueInputRange = document.querySelector(".blue");
 
-// Select the button and other elements
-const rgbBtn = document.querySelector("#rgb-btn");
-const getRedInputRange = document.querySelector("#red");
-const getGreenInputRange = document.querySelector("#green");
-const getBlueInputRange = document.querySelector("#blue");
-const rgbColorContainer = document.querySelector(".rgb-color-container");
+// Selecting the container to display the RGB value
 const rgbColorValue = document.querySelector(".rgb-color-value");
 
-// Add event listener for button click
+// Selecting the button to trigger the background color change
+const rgbBtn = document.querySelector(".rgb-btn");
+
+// Adding an event listener to the button
 rgbBtn.addEventListener("click", () => {
-  // Extract RGB values from input ranges
-  const extractRedValue = getRedInputRange.value;
-  const extractGreenValue = getGreenInputRange.value;
-  const extractBlueValue = getBlueInputRange.value;
+    // Getting the current values of Red, Green, and Blue from input ranges
+    const updateRedValue = getRedInputRange.value;
+    const updateGreenValue = getGreenInputRange.value;
+    const updateBlueValue = getBlueInputRange.value;
 
-  // Update the RGB text value
-  rgbColorValue.textContent = `rgb(${extractRedValue}, ${extractGreenValue}, ${extractBlueValue})`;
+    // Generating the RGB color string
+    const rgbColor = `rgb(${updateRedValue}, ${updateGreenValue}, ${updateBlueValue})`;
 
-  // Change the background color of the container
-  document.body.style.backgroundColor = `rgb(${extractRedValue}, ${extractGreenValue}, ${extractBlueValue})`;
+    // Updating the text content to show the RGB value
+    rgbColorValue.textContent = rgbColor;
 
- 
+    // Changing the background color of the body
+    document.body.style.backgroundColor = rgbColor;
 });
